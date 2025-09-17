@@ -11,7 +11,11 @@ const UserSchema = new mongoose.Schema(
     is_active: { type: Boolean, default: true },
     is_invited: { type: Boolean, default: false },
     email_verified: { type: Boolean, default: false },
-    company_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Company' }
+    company_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Company' },
+    resetToken: { type: String },
+    resetTokenExpires: { type: Date },
+    loginCode: { type: String },
+    loginCodeExpires: { type: Date }
   },
   { timestamps: true }
 );

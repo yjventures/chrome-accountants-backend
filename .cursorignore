@@ -1,0 +1,33 @@
+# Node
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist
+build
+.out
+.cache
+
+# Environment & secrets
+# .env
+# .env.*
+# !.env.example
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Coverage / testing
+coverage
+*.lcov
+
+# Editor / system files
+.DS_Store
+.vscode
+.idea
+*.swp
+*.swo
+*.tmp

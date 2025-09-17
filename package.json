@@ -12,12 +12,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "axios": "^1.12.1",
     "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "html-pdf-node": "^1.0.8",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.1",
-    "nodemailer": "^7.0.6"
+    "nodemailer": "^7.0.6",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^24.20.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
