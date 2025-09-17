@@ -126,16 +126,16 @@ class PDFFillerService {
     });
 
     // Special handling for title checkboxes - check the actual title value
-    const titleValue = this.getNestedValue(formData, 'contactInfo.title');
+    const titleValue = this.getNestedValue(formData, 'personalDetails.title');
     if (titleValue) {
       // Map title to appropriate checkbox
       const titleCheckboxMap = {
-        'MR': 'Check Box8',
-        'MRS': 'Check Box9',
-        'MS': 'Check Box10',
-        'MISS': 'Check Box11',
-        'DR': 'Check Box12',
-        'OTHER': 'Check Box13'
+        'MR': 'Check Box3.0',
+        'MRS': 'Check Box3.1',
+        'MS': 'Check Box3.2',
+        'MISS': 'Check Box3.3',
+        'DR': 'Check Box3.4',
+        'OTHER': 'Check Box3.5'
       };
       
       // Set the correct checkbox based on the title value
@@ -149,12 +149,12 @@ class PDFFillerService {
     const spouseTitleValue = this.getNestedValue(formData, 'spouseDetails.title');
     if (spouseTitleValue) {
       const spouseTitleCheckboxMap = {
-        'MR': 'Check Box3.0',
-        'MRS': 'Check Box3.1',
-        'MS': 'Check Box3.2',
-        'MISS': 'Check Box3.3',
-        'DR': 'Check Box3.4',
-        'OTHER': 'Check Box3.5'
+        'MR': 'Check Box4.0',
+        'MRS': 'Check Box4.1',
+        'MS': 'Check Box4.2',
+        'MISS': 'Check Box4.3',
+        'DR': 'Check Box4.4',
+        'OTHER': 'Check Box4.5'
       };
       
       // Set the correct checkbox based on the spouse title value
@@ -168,9 +168,9 @@ class PDFFillerService {
     const clientSelectedPhones = this.getNestedValue(formData, 'contactInfo.selectedPhones');
     if (clientSelectedPhones && Array.isArray(clientSelectedPhones)) {
       const phoneCheckboxMap = {
-        'mobile': 'Check Box4.0',
-        'home': 'Check Box4.1',
-        'work': 'Check Box4.2'
+        'mobile': 'Check Box13',
+        'home': 'Check Box8',
+        'work': 'Check Box9'
       };
       
       // Set checkboxes based on selected phone types
@@ -186,9 +186,9 @@ class PDFFillerService {
     const spouseSelectedPhones = this.getNestedValue(formData, 'spouseDetails.selectedPhones');
     if (spouseSelectedPhones && Array.isArray(spouseSelectedPhones)) {
       const spousePhoneCheckboxMap = {
-        'mobile': 'Check Box4.3',
-        'home': 'Check Box4.4',
-        'work': 'Check Box4.5'
+        'mobile': 'Check Box12',
+        'home': 'Check Box10',
+        'work': 'Check Box11'
       };
       
       // Set checkboxes based on selected spouse phone types

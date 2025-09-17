@@ -1,4 +1,5 @@
 const pdfFillerService = require('../services/pdfFillerService');
+const fs = require('fs');
 
 const submitClientContactForm = async (req, res) => {
   try {
@@ -8,6 +9,9 @@ const submitClientContactForm = async (req, res) => {
 
     // Generate filled PDF from form data
     const pdfBuffer = await pdfFillerService.generateFilledPDF(user.id, formData, false); // Keep PDF editable for now
+
+    // Save PDF to file
+    fs.writeFileSync('client-contact-form.pdf', pdfBuffer);
 
     // Send email with PDF attachment
     const emailService = require('../services/emailService');
